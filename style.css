@@ -1,0 +1,338 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif; 
+}
+body {
+  line-height: 1.8;
+  color: #333;
+  overflow-x: hidden; 
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e2f;
+  padding: 10px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+/* تنسيق الصورة الدائرية (logo.jpg) */
+.logo {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-left: 10px;
+  border: 3px solid #FFD700; 
+}
+.company-name {
+  color: #FFD700;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Times New Roman", serif;
+}
+/* الروابط: تظهر أفقياً بشكل افتراضي (للشاشات الكبيرة) */
+.nav-links {
+  list-style: none;
+  display: flex; 
+  flex-direction: row; 
+  gap: 20px;
+  transition: all 0.3s ease-in-out; 
+  height: auto; 
+  overflow: visible;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  padding-bottom: 5px;
+}
+.nav-links a:hover {
+  border-bottom: 3px solid #FFD700;
+}
+
+/* أيقونة الهامبرغر: مخفية بشكل افتراضي */
+.hamburger-icon {
+    display: none; 
+    cursor: pointer;
+    font-size: 30px;
+    color: #FFD700;
+}
+
+/* hero */
+.hero {
+  background-color: #1e1e2f;
+  height: 85vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.welcome-text {
+  font-size: 45px;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideDown 2s forwards;
+}
+@keyframes slideDown {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* تنسيق النص الفرعي */
+.hero-subtext {
+    font-size: 24px; /* زدت حجم الخط قليلاً ليصبح أوضح */
+    margin-top: 15px; /* مسافة أكبر بين العنوان الرئيسي وهذا السطر */
+    position: relative; 
+}
+
+/* ⬅ تنسيق الخط المتحرك من المنتصف - الآن ثابت ومرئي ⬅ */
+.hero-animated-underline {
+    position: relative; 
+    display: inline-block; 
+    padding-bottom: 20px; /* ⬅ المسافة بين النص والخط (تم زيادتها لإنزاله) ⬅ */
+    font-weight: normal; 
+}
+
+.hero-animated-underline::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; /* الخط يظهر 100% تلقائياً عند تحميل الصفحة */
+    height: 5px; 
+    background-color: #FFD700; 
+    transition: width 0.7s ease-out; /* تم ترك الترانزيشن */
+}
+/* تم حذف كود الهوفر هنا */
+
+/* sections */
+section { 
+    padding: 60px 80px; 
+    text-align: center; 
+}
+section h2 {
+    font-size: 36px;
+    color: #0a1f44;
+    margin-bottom: 30px;
+}
+.about, .services-section, .contact {
+  background: #f9f9f9;
+}
+
+/* خدماتنا (تأثير Hover والتوزيع الشبكي) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 20px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center; 
+}
+
+.service-box {
+  background: #fff;
+  padding: 30px 20px; 
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+  text-align: center;
+  transition: transform 0.3s, border 0.3s, box-shadow 0.3s; 
+  border: 3px solid transparent; 
+  height: 100%; 
+}
+.service-box:hover {
+    transform: translateY(-5px); 
+    border: 3px solid #FFD700; 
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4); 
+}
+
+.service-icon { 
+    font-size: 55px; 
+    color: #FFD700; 
+    margin-bottom: 15px; 
+    display: block; 
+}
+.service-box h3 {
+    color: #0a1f44;
+}
+
+/* contact */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-around; 
+  align-items: flex-start; 
+  flex-wrap: wrap;
+  gap: 30px; 
+  padding: 20px 0;
+}
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: right; 
+}
+.contact-info p i {
+    color: #0a1f44;
+    margin-left: 10px;
+}
+.map-container {
+  border: 3px solid #0a1f44;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* footer */
+footer {
+  background: #1e1e2f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.socials {
+    margin-top: 10px;
+}
+.social-icon {
+    font-size: 30px;
+    margin: 0 10px;
+    color: #fff; 
+    transition: color 0.3s;
+}
+.socials a:hover .social-icon {
+    color: #FFD700; 
+}
+
+/* ====== تنسيق زر العودة إلى الأعلى ====== */
+.scroll-to-top-btn {
+  /* الموقع والتثبيت */
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  z-index: 1001; 
+
+  /* التصميم */
+  background-color: #FFD700; 
+  color: #1e1e2f; 
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* الإخفاء الافتراضي والتأثير السلس */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* فئة الإظهار التي يضيفها JavaScript */
+.scroll-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* تحسين التجاوب لكل المقاسات (Media Queries) */
+
+/* ⬅ 1. لضمان عرض النافبار صحيحاً في الشاشات الكبيرة (أكبر من 992 بكسل) */
+@media (min-width: 993px) {
+    /* إخفاء أيقونة الهامبرغر تماماً */
+    .hamburger-icon {
+        display: none !important; 
+    }
+    /* التأكد من أن الروابط أفقية وموضوعة بشكل صحيح */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto !important;
+        width: auto !important;
+        overflow: visible !important;
+    }
+}
+/* شاشات اللاب توب والتابلت الكبيرة (أقل من 1200px) */
+@media (max-width: 1200px) {
+    section { padding: 50px 40px; }
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+}
+/* ⬅ 2. شاشات التابلت (أقل من 992px) - تفعيل الهامبرغر هنا */
+@media (max-width: 992px) {
+    /* إظهار أيقونة الهامبرغر */
+    .hamburger-icon {
+        display: block; 
+    }
+    
+    .navbar { 
+        padding: 10px 30px; 
+        flex-wrap: wrap; 
+        align-items: flex-start; 
+    }
+    
+    /* إخفاء قائمة الروابط وتغيير اتجاهها إلى عمودي */
+    .nav-links {
+        width: 100%;
+        height: 0; 
+        overflow: hidden; 
+        flex-direction: column; 
+        gap: 0;
+        text-align: right;
+    }
+    /* فئة JavaScript التي ستظهر القائمة */
+    .nav-links.active {
+        height: auto; 
+        padding-bottom: 15px; 
+    }
+    
+    .nav-links li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+}
+
+/* شاشات الهواتف الكبيرة والتابلت الصغيرة (أقل من 768px) */
+@media (max-width: 768px) {
+    .hero { height: 50vh; }
+    .welcome-text { font-size: 30px; }
+    section { padding: 30px 20px; }
+    .services-grid {
+        grid-template-columns: 1fr; 
+    }
+    .contact-wrapper { justify-content: center; text-align: center; }
+    .contact-info p { text-align: center; }
+}
+
+/* شاشات الهواتف الصغيرة (أقل من 480px) */
+@media (max-width: 480px) {
+    .company-name { font-size: 20px; }
+    .welcome-text { font-size: 24px; }
+    section h2 { font-size: 28px; }
+    .logo { width: 40px; height: 40px; }
+    .scroll-to-top-btn { 
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
