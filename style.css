@@ -394,7 +394,7 @@ footer {
     }
     /* تعديل الأزرار في الهواتف */
     .hero-buttons {
-        flex-direction: column; /* الأزرار عمودياً */
+        flex-direction: inherit; /* الأزرار عمودياً */
         gap: 15px;
     }
     .btn {
