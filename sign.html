@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Travel - تسجيل الدخول</title>
+  
+  <link rel="icon" type="image/png" href="logo_round.png"> 
+  <link rel="stylesheet" href="sign.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Team Travel Logo" class="logo">
+        <span class="company-name">Team Travel</span>
+      </div>
+      
+      <i class="fas fa-bars hamburger-icon"></i> 
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li> 
+        <li><a href="index.html#about">عن الشركة</a></li>
+        <li><a href="index.html#services">خدماتنا</a></li>
+        
+        <li><a href="register.html">تسجيل عميل</a></li> 
+        <li><a href="clients.html">قائمة العملاء</a></li>
+        
+        <li><a href="index.html#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="login" class="hero login-hero-section">
+    <h1 class="welcome-text">مرحباً بك في <span style="color: #FFD700;">لوحة التحكم</span></h1>
+    <p class="hero-subtext">
+        <span class="hero-animated-underline">يرجى تسجيل الدخول للمتابعة</span>
+    </p>
+
+    <form class="login-form" id="loginForm" method="POST">
+        <div class="form-group">
+            <label for="username">اسم المستخدم أو البريد الإلكتروني</label>
+            <input type="text" id="username" name="username" placeholder="أدخل اسم المستخدم" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" required>
+        </div>
+
+        <button type="submit" class="submit-btn primary-btn login-btn">تسجيل الدخول</button>
+        
+        <p id="loginMessage" class="login-message" style="display:none; color:#FFD700; margin-top: 15px; font-size: 18px;">بيانات الدخول غير صحيحة. حاول مجدداً.</p>
+    </form>
+    </section>
+  
+  <footer>
+    <p>© 2025 جميع الحقوق محفوظة لشركة Team Travel</p>
+    <div class="socials">
+      <a href="mailto:eg.teamtravel@gmail.com"><i class="fas fa-envelope social-icon"></i></a>
+      <a href="https://wa.link/v7z8mx"><i class="fab fa-whatsapp social-icon"></i></a>
+      <a href="https://web.facebook.com/profile.php?id=61580625552487&sk=about"><i class="fab fa-facebook-f social-icon"></i></a>
+    </div>
+  </footer>
+  <script src="sign.js"></script> 
+</body>
+</html>

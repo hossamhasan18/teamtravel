@@ -120,6 +120,63 @@ body {
 }
 /* تم حذف كود الهوفر هنا */
 
+/* ====== الإضافات الجديدة لـ CSS (قسم الـ Hero Buttons) ====== */
+
+/* تنسيق حاوية الأزرار */
+.hero-buttons {
+    margin-top: 40px; /* مسافة من النص أعلاه */
+    display: flex;
+    gap: 20px; /* مسافة بين الزرين */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    /* تفعيل الأنميشن مع النص الترحيبي */
+    animation: slideUp 2s 0.5s forwards; /* تأخير بسيط بعد النص */
+}
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* تنسيق الزر الأساسي (Primary Button) */
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent; /* لجعل الترانزيشن سلساً */
+}
+
+/* الزر الأساسي: تسجيل عميل */
+.primary-btn {
+    background-color: #FFD700; /* اللون الأصفر */
+    color: #1e1e2f; /* لون النص الداكن */
+    border-color: #FFD700;
+}
+.primary-btn:hover {
+    background-color: #1e1e2f; /* عكس الألوان عند الهوفر */
+    color: #FFD700;
+    border-color: #FFD700;
+    transform: scale(1.05);
+}
+
+/* الزر الثانوي: قائمة العملاء */
+.secondary-btn {
+    background-color: transparent; /* خلفية شفافة */
+    color: #fff; /* لون النص الأبيض */
+    border-color: #FFD700; /* إطار أصفر */
+}
+.secondary-btn:hover {
+    background-color: #FFD700; /* عكس الألوان عند الهوفر */
+    color: #1e1e2f;
+    border-color: #FFD700;
+    transform: scale(1.05);
+}
+
+
 /* sections */
 section { 
     padding: 60px 80px; 
@@ -334,5 +391,15 @@ footer {
         width: 40px;
         height: 40px;
         font-size: 18px;
+    }
+    /* تعديل الأزرار في الهواتف */
+    .hero-buttons {
+        flex-direction: column; /* الأزرار عمودياً */
+        gap: 15px;
+    }
+    .btn {
+        width: 100%; /* الزر يأخذ عرض الحاوية بالكامل */
+        max-width: 250px;
+        font-size: 16px;
     }
 }

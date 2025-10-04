@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Travel - تسجيل عميل</title>
+  
+  <link rel="icon" type="image/png" href="logo_round.png"> 
+  <link rel="stylesheet" href="employee.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Team Travel Logo" class="logo">
+        <span class="company-name">Team Travel</span>
+      </div>
+      
+      <i class="fas fa-bars hamburger-icon"></i> 
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li> 
+        <li><a href="index.html#about">عن الشركة</a></li>
+        <li><a href="index.html#services">خدماتنا</a></li>
+        
+        <li><a href="#">تسجيل عميل</a></li> 
+        <li><a href="clients.html">قائمة العملاء</a></li>
+        
+        <li><a href="index.html#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="register" class="hero form-hero-section">
+    <h1 class="welcome-text">نموذج <span style="color: #FFD700;">تسجيل عميل</span> جديد</h1>
+    <p class="hero-subtext">
+        <span class="hero-animated-underline">يرجى ملء البيانات بدقة</span>
+    </p>
+
+    <form class="registration-form" action="#" method="POST" enctype="multipart/form-data">
+        <div class="form-row">
+            <input type="text" id="clientName" name="clientName" placeholder="الاسم الأول" required>
+            <input type="text" id="clientName2" name="clientName2" placeholder="الاسم الثاني" required>
+        </div>
+        <div class="form-row">
+            <input type="tel" id="clientPhone" name="clientPhone" placeholder="رقم موبايل العميل" required>
+            <input type="text" id="clientLocation" name="clientLocation" placeholder="مكان إقامة العميل" required>
+        </div>
+        <div class="form-row">
+            <input type="tel" id="clientPhone" name="clientPhone" placeholder="المبلغ المدفوع" required>
+            <input type="text" id="clientLocation" name="clientLocation" placeholder="المبلغ المتبقي" required>
+        </div>
+        
+        <h3 class="follow-up-title">المستندات المطلوبة</h3>
+
+        <div class="form-row file-upload-row single-row"> 
+            <label for="passportScan" class="file-label full-width-label">
+                <i class="fas fa-passport"></i> صورة جواز السفر (ممسوحة)
+                <input type="file" id="passportScan" name="passportScan" accept="image/*,.pdf" required>
+            </label>
+        </div>
+        
+        <h3 class="follow-up-title">بيانات التابع (إن وجد)</h3>
+        <div class="form-row">
+            <input type="text" id="followerName" name="followerName" placeholder="تابع لمن (الاسم)">
+            <input type="tel" id="followerPhone" name="followerPhone" placeholder="رقم موبايل التابع">
+        </div>
+        <div class="form-row">
+            <input type="text" id="followerLocation" name="followerLocation" placeholder="مكان إقامة التابع">
+        </div>
+
+        <div class="form-row">
+            <select id="serviceType" name="serviceType" required>
+                <option value="" disabled selected>اختر نوع الخدمة</option>
+                <option value="visa">استخراج تأشيرة</option>
+                <option value="jobs">حجز موعد</option>
+                <option value="tour">رحلات سياحية</option>
+                <option value="hajj">حج وعمرة</option>
+                <option value="other">عقد عمل</option>
+                <option value="other">خدمة أخرى</option>
+
+            </select>
+        </div>
+
+        <button type="submit" class="submit-btn primary-btn">تسجيل البيانات</button>
+    </form>
+    </section>
+  
+  <footer>
+    <p>© 2025 جميع الحقوق محفوظة لشركة Team Travel</p>
+    <div class="socials">
+      <a href="mailto:eg.teamtravel@gmail.com"><i class="fas fa-envelope social-icon"></i></a>
+      <a href="https://wa.link/v7z8mx"><i class="fab fa-whatsapp social-icon"></i></a>
+      <a href="https://web.facebook.com/profile.php?id=61580625552487&sk=about"><i class="fab fa-facebook-f social-icon"></i></a>
+    </div>
+  </footer>
+  
+
+  <button id="scrollToTopBtn" class="scroll-to-top-btn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <footer>
+    </footer>
+  
+  <script src="script.js"></script> 
+</body>
+</html>
+</body>
+</html>
